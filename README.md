@@ -55,28 +55,32 @@ Further implementation details and simulation results are provided in the reposi
 
 ### Secrecy Rate vs. Eavesdropper Distance
 
-The achievable secrecy rate is evaluated for different numbers of reader antennas as the distance between the tag and the eavesdropper varies.
+The achievable secrecy rate increases as the distance between the tag and the eavesdropper grows, since the increased propagation loss weakens the eavesdropping link.
 
-The optimized design is also compared with a brute-force benchmark.
+Increasing the number of reader antennas also improves the secrecy rate through enhanced spatial beamforming capability. The optimized solution is compared with a brute-force benchmark.
 
 ![Secrecy rate vs. transmission distance](Results/Figure_1.png)
 
 ### Optimized Reflection Coefficients
 
-The optimized reflection coefficients are evaluated for different reader antenna configurations over the considered transmission distances.
+The optimized reflection coefficients remain at `Gamma_0 = 1` and `Gamma_1 = 0` across the considered distances and antenna configurations.
+
+Under the selected transmit power, the harvested energy is sufficient to satisfy the tag's energy constraint. The optimization therefore selects the maximum feasible reflection contrast.
 
 ![Reflection coefficients vs. transmission distance](Results/Figure_2.png)
 
 ### Reader Spectral Efficiency
 
-The spectral efficiency of the legitimate reader is evaluated as a function of the tag-to-eavesdropper distance for different numbers of reader antennas.
+The reader spectral efficiency remains nearly constant as the tag-to-eavesdropper distance changes because the reader-to-tag distance is fixed at 10 m.
+
+Increasing the number of reader antennas significantly improves the legitimate-link spectral efficiency.
 
 ![Reader spectral efficiency](Results/Figure_3.png)
 
 ### Algorithm Convergence
 
-The convergence behavior of the alternating optimization algorithm is illustrated for the case of `N = 4` reader antennas and `d_UE = 20 m`.
+The alternating optimization algorithm progressively converges over successive iterations.
 
-The secrecy rate progressively converges over successive iterations, demonstrating the convergence behavior of the proposed SCA/SDR-based optimization procedure.
+A damped SCA update with a step size of `0.3` is applied to improve numerical stability. The example below shows the convergence behavior for `N = 4` and `d_UE = 20 m`.
 
 ![Algorithm convergence](Results/Figure_4.png)
