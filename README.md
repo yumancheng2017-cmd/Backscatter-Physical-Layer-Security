@@ -50,3 +50,33 @@ The main techniques include:
 The MATLAB scripts implement the system model and optimization algorithms used to evaluate the secrecy performance of the backscatter communication system.
 
 Further implementation details and simulation results are provided in the repository.
+
+## Results
+
+### Secrecy Rate vs. Eavesdropper Distance
+
+The achievable secrecy rate is evaluated for different numbers of reader antennas as the distance between the tag and the eavesdropper varies.
+
+The optimized design is also compared with a brute-force benchmark.
+
+![Secrecy rate vs. transmission distance](Results/Figure_1.png)
+
+### Optimized Reflection Coefficients
+
+The optimized reflection coefficients are evaluated for different reader antenna configurations over the considered transmission distances.
+
+![Reflection coefficients vs. transmission distance](Results/Figure_2.png)
+
+### Reader Spectral Efficiency
+
+The spectral efficiency of the legitimate reader is evaluated as a function of the tag-to-eavesdropper distance for different numbers of reader antennas.
+
+![Reader spectral efficiency](Results/Figure_3.png)
+
+### Algorithm Convergence
+
+The convergence behavior of the alternating optimization algorithm is illustrated for the case of `N = 4` reader antennas and `d_UE = 20 m`.
+
+The secrecy rate progressively converges over successive iterations, demonstrating the convergence behavior of the proposed SCA/SDR-based optimization procedure.
+
+![Algorithm convergence](Results/Figure_4.png)
